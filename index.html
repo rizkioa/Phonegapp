@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <!-- Title -->
+        <title>Data Perusahaan - Disnakertrans Provinsi Lampung</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <meta charset="UTF-8">
+        <meta name="description" content="Responsive Admin Dashboard Template" />
+        <meta name="keywords" content="admin,dashboard" />
+        <meta name="author" content="Steelcoders" />
+
+        <!-- Styles -->
+        <link type="text/css" rel="stylesheet" href="assets/plugins/materialize/css/materialize.min.css"/>
+        <link href="assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
+
+
+        <!-- Theme Styles -->
+        <link href="assets/css/icon.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
+        <script src="assets/plugins/sweetalert/sweetalert.min.js"></script>
+        <script type="text/javascript" src="scripts/server.js"></script>
+
+        <script type="text/javascript">
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+            // device APIs are available
+            //
+            // function exitFromApp()
+            //  {
+            //     navigator.app.exitApp();
+            //  }
+            function onDeviceReady() {
+                checkConnection();
+            }
+
+                function checkConnection() {
+                    var networkState = navigator.connection.type;
+
+                    var states = {};
+                    states[Connection.UNKNOWN]  = 'Unknown connection';
+                    states[Connection.ETHERNET] = 'Ethernet connection';
+                    states[Connection.WIFI]     = 'WiFi connection';
+                    states[Connection.CELL_2G]  = 'Cell 2G connection';
+                    states[Connection.CELL_3G]  = 'Cell 3G connection';
+                    states[Connection.CELL_4G]  = 'Cell 4G connection';
+                    states[Connection.CELL]     = 'Cell generic connection';
+                    states[Connection.NONE]     = 'No network connection';
+
+                    // alert('Connection type: ' + states[networkState]);
+                    if (states[networkState] == 'Unknown connection' ) {
+                      swal({
+                  				title: "Koneksi Error",
+                  				type: "error",
+                  				text: "Cek Internet Anda, Koneksi Anda Bermasalah",
+                  				html: true
+                  			});
+                        //exitFromApp();
+                    }else if(states[networkState] == 'No network connection' ){
+                      swal({
+                  				title: "Koneksi Error",
+                  				type: "error",
+                  				text: "Cek Internet Anda, Koneksi Anda Bermasalah",
+                  				html: true
+                          //exitFromApp()
+                  			});
+                    }
+                }
+
+        </script>
+        <style type="text/css">
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 10%;
+          }
+          </style>
+
+
+    </head>
+    <body class="signin-page">
+        <div class="loader-bg"></div>
+        <div class="loader">
+            <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-blue">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div><div class="gap-patch">
+                    <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                    </div>
+                </div>
+                <div class="spinner-layer spinner-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div><div class="gap-patch">
+                    <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                    </div>
+                </div>
+                <div class="spinner-layer spinner-yellow">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div><div class="gap-patch">
+                    <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                    </div>
+                </div>
+                <div class="spinner-layer spinner-green">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div><div class="gap-patch">
+                    <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mn-content valign-wrapper">
+            <main class="mn-inner container">
+              <img src="assets/images/lampung.png">
+                <div class="valign">
+                      <div class="row">
+                          <div class="col s12 m6 l4 offset-l4 offset-m3">
+                              <div class="card white darken-1">
+                                  <div class="card-content ">
+                                      <span class="card-title">Data Perusahaan Disnakertrans</span>
+                                       <div class="row">
+                                           <form class="col s12">
+                                               <div class="input-field col s12">
+                                                   <input id="username" type="email" class="validate">
+                                                   <label for="email">Username</label>
+                                               </div>
+                                               <div class="input-field col s12">
+                                                   <input id="password" type="password" class="validate">
+                                                   <label for="password">Password</label>
+                                               </div>
+                                               <div class="col s12 right-align m-t-sm">
+                                                   <a  class="waves-effect waves-light btn teal" id="login">Login</a>
+                                               </div>
+
+                                           </form>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col s12 center-align m-t-sm">
+                                <span class="col s12 btn white" >Tidak Bisa Login?</span>
+                                <a href="daftar.html" class=" col s12 waves-effect waves-grey btn green">Daftar</a>
+                                <a id="lupapassword" class=" col s12 waves-effect waves-grey btn red">Lupa Password?</a>
+                                </div>
+                          </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Javascripts -->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+        <script src="assets/plugins/jquery/jquery-2.2.0.min.js"></script>
+        <script src="assets/plugins/materialize/js/materialize.min.js"></script>
+        <script src="assets/plugins/material-preloader/js/materialPreloader.min.js"></script>
+        <script src="assets/plugins/jquery-blockui/jquery.blockui.js"></script>
+        <script src="assets/js/alpha.min.js"></script>
+        <script type="text/javascript" src="scripts/proses_login.js"></script>
+
+
+    </body>
+</html>

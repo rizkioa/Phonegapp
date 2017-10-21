@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Data Perusahaan - Disnakertrans Provinsi Lampung</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <meta charset="UTF-8">
+        <meta name="description" content="Responsive Admin Dashboard Template" />
+        <meta name="keywords" content="admin,dashboard" />
+        <meta name="author" content="Steelcoders" />
+        <link type="text/css" rel="stylesheet" href="assets/plugins/materialize/css/materialize.min.css"/>
+        <link href="assets/css/icon.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
+        <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
+        <script src="assets/plugins/sweetalert/sweetalert.min.js"></script>
+    </head>
+    <body>
+        <div class="loader-bg"></div>
+        <div class="loader">
+            <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-blue">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div><div class="gap-patch">
+                    <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                    </div>
+                </div>
+                <div class="spinner-layer spinner-spinner-teal lighten-1">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div><div class="gap-patch">
+                    <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                    </div>
+                </div>
+                <div class="spinner-layer spinner-yellow">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div><div class="gap-patch">
+                    <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                    </div>
+                </div>
+                <div class="spinner-layer spinner-green">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div><div class="gap-patch">
+                    <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mn-content fixed-sidebar">
+            <header class="mn-header navbar-fixed">
+                <nav class="cyan darken-1">
+                    <div class="nav-wrapper row">
+                        <section class="material-design-hamburger navigation-toggle">
+                            <a href="#" data-activates="slide-out" class="button-collapse show-on-large material-design-hamburger__icon">
+                                <span class="material-design-hamburger__layer"></span>
+                            </a>
+                        </section>
+                        <div class="header-title col s3">
+                            <span class="chapter-title">Disnakertrans</span>
+                        </div>
+                        <ul class="right col s9 m3 nav-right-menu">
+                            <li class="hide-on-small-and-down"><a href="javascript:void(0)" data-activates="dropdown1" class="dropdown-button dropdown-right show-on-large"><i class="material-icons">notifications_none</i></a></li>
+                            <li class="hide-on-med-and-up"><a href="javascript:void(0)" class="search-toggle"><i class="material-icons">search</i></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <aside id="slide-out" class="side-nav white fixed">
+                <div class="side-nav-wrapper">
+                    <div class="sidebar-profile">
+                        <div class="sidebar-profile-image">
+                            <img src="assets/images/profile-image.png" class="circle" alt="">
+                        </div>
+                        <div class="sidebar-profile-info">
+                            <a href="#" class="account-settings-link">
+                                <p id="nama_akun"></p>
+                                <span id="jabatan_akun"><i class="material-icons right">arrow_drop_down</i></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sidebar-account-settings">
+                        <ul>
+
+
+                        </ul>
+                    </div>
+                <ul class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion">
+          <li class="no-padding"><a class="waves-effect waves-grey" href="admin.html"><i class="material-icons">settings_input_svideo</i>Beranda</a></li>
+					<li class="no-padding"><a class="waves-effect waves-grey" href="perusahaan.html"><i class="material-icons">grid_on</i>Data Perusahaan</a></li>
+          <li class="no-padding"><a class="waves-effect waves-grey" href="laporan.html"><i class="material-icons">mode_edit</i>Laporan</a></li>
+          <li class="divider"></li>
+          <li class="no-padding">
+              <a href="inbox.html" class="waves-effect waves-grey"><i class="material-icons">mail_outline</i>Inbox</a>
+          </li>
+          <li class="no-padding">
+              <a href="setting.html" class="waves-effect waves-grey"><i class="material-icons">star_border</i>Setting Akun</a>
+          </li>
+            <li class="divider"></li>
+          <li class="no-padding">
+              <a id="btn_keluar" class="waves-effect waves-grey"><i class="material-icons">exit_to_app</i>Keluar</a>
+          </li>
+
+                </ul>
+                <div class="footer">
+                    <p class="copyright">Disnakertrans</p>
+                    <a href="#!">2017</a> &amp; <a href="lampungprov.go.id">Provinsi Lampung</a>
+                </div>
+                </div>
+            </aside>
+
+            <main class="mn-inner">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="page-title">INPUT DATA PERUSAHAAN</div>
+                    </div>
+                    <div class="col s12 m12 l12">
+                        <div class="card">
+                            <div class="card-content">
+                               Anda dapat menambahkan Data Perusahaan pada Akun Anda. Setelah Input berhasil, silahkan tunggu Sampai Admin melakukan Verifikasi Kebenaran Data yang Anda Input.
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m12 12">
+                        <div class="row">
+                          <div class="card">
+                              <div class="card-content">
+                                <form id="form_tambah" name="form_tambah" method="post">
+                                        <input id="username" type="hidden" >
+                                        <input id="nomor_registrasi" name="nomor_registrasi" type="hidden">
+                                        <input id="waktu_input" type="hidden" value="123" >
+
+                                        <label>Bentuk Perusahaan</label>
+                                        <select class="browser-default" required='required' id="bentur_perusahaan">
+                                            <option value="" disabled selected>Bentuk</option>
+                                            <option value="CV">CV</option>
+                                            <option value="PT">PT</option>
+                                            <option value="Lainnya">Lainnya</option>
+                                        </select>
+
+                                        <label>Nama Perusahaan</label>
+                                        <input id="nama_perusahaan" name="nama_perusahaan" type="text">
+
+                                        <label>Alamat Perusahaan</label>
+                                        <input id="alamat_perusahaan" name="nama_perusahaan" type="text">
+
+                                        <label>Nomor NPWP</label>
+                                        <input id="npwp_perusahaan" name="npwp_perusahaan" type="text">
+
+                                        <label>Nomor SIUP</label>
+                                        <input id="siup_perusahaan" name="siup_perusahaan" type="text">
+
+                                        <label>Nomor SITU</label>
+                                        <input id="situ_ho_perusahaan" name="situ_ho_perusahaan" type="text">
+
+                                        <label>Bidang Pekerjaan Perusahaan</label>
+                                        <input id="bidang_pekerjaan_perusahaan" name="bidang_pekerjaan_perusahaan" type="text">
+
+                                        <label>Nomor TDP</label>
+                                        <input id="tdp_perusahaan" name="tdp_perusahaan" type="text">
+
+                                        <label>Jumlah Pekerja</label>
+                                        <input id="jumlah_pekerja" name="jumlah_pekerja" type="number">
+
+                                        <label>Upah Minimum(Rp.)</label>
+                                        <input id="ump" name="ump" type="number">
+
+                                        <label>Nomor Telp</label>
+                                        <input id="nomor_tlp_perusahaan" name="nomor_tlp_perusahaan" type="number">
+
+                                        <label>Bank Perusahaan</label>
+                                        <select class="browser-default" required='required' id="bank_perusahaan">
+                                            <option value="" disabled selected>Pilih salah satu</option>
+                                            <option value="Bank Lampung">Bank Lampung</option>
+                                            <option value="Lainnya">Lainnya</option>
+                                        </select>
+
+                                        <label>Nama Direktur</label>
+                                        <input id="direktur_perusahaan" name="direktur_perusahaan" type="text">
+
+                                        <label>Nomor Tlp Direktur</label>
+                                        <input id="nomor_telp_direktur_perusahaan" name="nomor_telp_direktur_perusahaan" type="number">
+
+                                        <input type="submit" class="btn" id="btn_input_data" value="SIMPAN DATA"></input>
+                                </form>
+                              </div>
+                          </div>
+
+                        </div>
+                    </div>
+                </div>
+            </main>
+                    <div class="left-sidebar-hover"></div>
+
+
+                    <!-- Javascripts -->
+                    <script src="assets/plugins/jquery/jquery-2.2.0.min.js"></script>
+                    <script src="assets/plugins/materialize/js/materialize.min.js"></script>
+                    <script src="assets/plugins/material-preloader/js/materialPreloader.min.js"></script>
+                    <script src="assets/plugins/jquery-blockui/jquery.blockui.js"></script>
+                    <script src="assets/js/alpha.min.js"></script>
+                    <script type="text/javascript" src="scripts/server.js"></script>
+                    <script type="text/javascript" src="scripts/cekkondisi.js"></script>
+                    <script type="text/javascript" src="scripts/dataAkun.js"></script>
+                    <script type="text/javascript" src="scripts/tambah_data.js"></script>
+                    <script type="text/javascript">
+
+                    var dates = new Date;
+                    var detik = dates.getSeconds();
+                    var jam  = dates.getHours();
+                    var tanggal  = dates.getDate();
+                    var bulan  = dates.getMonth();
+                    var username = localStorage.username;
+                    var waktu_input  = new Date();
+
+                    document.getElementById('username').value = username;
+                    document.getElementById('nomor_registrasi').value = username+Math.floor(Math.random()* jam * detik * tanggal * bulan );
+                    document.getElementById('waktu_input').value = bulan;
+                    </script>
+                    <!-- Script Ade -->
+
+                    <script type="text/javascript">
+                    $('#bantuan_button').click(function(){
+          						swal({
+          						title: "Butuh Bantuan",
+          						type: "info",
+          						text: 'Informasi lebih lanjut, silahkan hubungi Admin',
+          						html: true
+          									});
+                            });
+
+                    </script>
+
+
+
+                </body>
+            </html>
