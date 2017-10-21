@@ -1,11 +1,1 @@
-     localStorage.login = '';
-        var url = window.location.pathname;
-        var filename = url.substring(url.lastIndexOf('/') + 1);
-        if (localStorage.login == "true" && filename == 'login.html') {
-        		window.location.href = "index.html";
-        } else if (localStorage.login == null && filename == 'index.html') {
-        		window.location.href = "login.html";
-        } else if (localStorage.login == "false" && filename != 'login.html') {
-        		window.location.href = "login.html";
-        };
-       
+/* Write your custom CSS here */
