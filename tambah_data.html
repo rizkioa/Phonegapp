@@ -149,35 +149,36 @@
                                             <option value="Lainnya">Lainnya</option>
                                         </select>
 
-                                        <label>Nama Perusahaan</label>
-                                        <input id="nama_perusahaan" name="nama_perusahaan" type="text">
+                                        <label>Nama Perusahaan (Tanpa Bentuk/Jenis)</label>
+                                        <input id="nama_perusahaan" name="nama_perusahaan" type="text" placeholder="Contoh: Laksana Aneka Sarana">
 
                                         <label>Alamat Perusahaan</label>
-                                        <input id="alamat_perusahaan" name="nama_perusahaan" type="text">
+                                        <input id="alamat_perusahaan" name="nama_perusahaan" type="text" placeholder="Contoh: Jl. Teuku Umar Gg. Kelinci No. 47 kedaton Bandar Lampung">
 
                                         <label>Nomor NPWP</label>
-                                        <input id="npwp_perusahaan" name="npwp_perusahaan" type="text">
+                                        <input id="npwp_perusahaan" name="npwp_perusahaan" type="text" placeholder="Contoh: ABC/I.ABC/IX/2017">
 
                                         <label>Nomor SIUP</label>
-                                        <input id="siup_perusahaan" name="siup_perusahaan" type="text">
+                                        <input id="siup_perusahaan" name="siup_perusahaan" type="text" placeholder="Contoh: ABC/I.ABC/IX/2017">
 
                                         <label>Nomor SITU</label>
-                                        <input id="situ_ho_perusahaan" name="situ_ho_perusahaan" type="text">
-
-                                        <label>Bidang Pekerjaan Perusahaan</label>
-                                        <input id="bidang_pekerjaan_perusahaan" name="bidang_pekerjaan_perusahaan" type="text">
+                                        <input id="situ_ho_perusahaan" name="situ_ho_perusahaan" type="text" placeholder="Contoh: ABC/I.ABC/IX/2017">
 
                                         <label>Nomor TDP</label>
-                                        <input id="tdp_perusahaan" name="tdp_perusahaan" type="text">
+                                        <input id="tdp_perusahaan" name="tdp_perusahaan" type="text" placeholder="">
 
-                                        <label>Jumlah Pekerja</label>
-                                        <input id="jumlah_pekerja" name="jumlah_pekerja" type="number">
+                                        <label>Bidang Pekerjaan Perusahaan</label>
+                                        <input id="bidang_pekerjaan_perusahaan" name="bidang_pekerjaan_perusahaan" type="text" placeholder="Contoh: Jasa Pembuatan Aplikasi dan Program">
 
-                                        <label>Upah Minimum(Rp.)</label>
-                                        <input id="ump" name="ump" type="number">
 
-                                        <label>Nomor Telp</label>
-                                        <input id="nomor_tlp_perusahaan" name="nomor_tlp_perusahaan" type="number">
+                                        <label>Jumlah Pekerja (Hanya Angka) </label>
+                                        <input id="jumlah_pekerja" name="jumlah_pekerja" type="number" placeholder="Contoh: 78" >
+
+                                        <label>Upah Minimum (Hanya Angka Tanpa Titik)</label>
+                                        <input id="ump" name="ump" type="number" placeholder="Contoh: 4300000">
+
+                                        <label>Nomor Telp (Hanya Angka)</label>
+                                        <input id="nomor_tlp_perusahaan" name="nomor_tlp_perusahaan" type="number" placeholder="Contoh: 082182008072">
 
                                         <label>Bank Perusahaan</label>
                                         <select class="browser-default" required='required' id="bank_perusahaan">
@@ -189,14 +190,16 @@
                                         <label>Nama Direktur</label>
                                         <input id="direktur_perusahaan" name="direktur_perusahaan" type="text">
 
-                                        <label>Nomor Tlp Direktur</label>
-                                        <input id="nomor_telp_direktur_perusahaan" name="nomor_telp_direktur_perusahaan" type="number">
 
-                                        <input type="submit" class="btn" id="btn_input_data" value="SIMPAN DATA"></input>
-                                </form>
+                                        <label>Nomor Tlp Direktur (Hanya Angka)</label>
+                                        <input id="nomor_telp_direktur_perusahaan" name="nomor_telp_direktur_perusahaan" type="number" placeholder="Contoh: 082182008072">
+
+                                          <label>Anda yakin Dengan Data diatas?</label>
+                                          <input type="submit" class="btn right-align" id="btn_input_data" value="SIMPAN DATA"></input>
+
                               </div>
                           </div>
-
+                          </form>
                         </div>
                     </div>
                 </div>
@@ -223,9 +226,10 @@
                     var bulan  = dates.getMonth();
                     var username = localStorage.username;
                     var waktu_input  = new Date();
+                    tanggal + detik + tanggal * tanggal / detik + Math.floor(Math.random()* jam * detik * tanggal * bulan * 29 * 77 * 39 );
 
                     document.getElementById('username').value = username;
-                    document.getElementById('nomor_registrasi').value = username+Math.floor(Math.random()* jam * detik * tanggal * bulan );
+                    document.getElementById('nomor_registrasi').value = tanggal + detik + tanggal * tanggal + detik + Math.floor(Math.random()* jam * detik * tanggal * bulan * 29 * 77 * 39 * 4 * 11 / 101 );
                     document.getElementById('waktu_input').value = bulan;
                     </script>
                     <!-- Script Ade -->

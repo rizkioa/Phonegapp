@@ -1,34 +1,32 @@
 
-$(document).ready(function(){
-	var url="http://"+server+"/disnakerserver/cekupdate.php?versi=?";
-  var versi= "1.0"
-  var dataString= 'versi='+versi;
-
-			$.ajax({
-				type: "POST",
-				url: url,
-				data: dataString,
-				crossDomain: true,
-				cache: false,
-				success: function(hasil){
-					if(versi != hasil)
-					{
-            swal({
-							title: "Update Available",
-							type: "error",
-							text: "Silahkan Update Aplikasi untuk melanjutkan",
-							html: true
-						});
-
-					}
-					else
-					{
-            '<a href=""http://"+server+"/disnakerserver/aplikasi/disnakerapp.apk">Download!</a>'
-					}
-				}
-			});
-		}
-		);
+	// 
+	//
+  // var versi= "1.0"
+  // var dataString= 'versi='+versi;
+	//
+	// 		$.ajax({
+	// 			type: "POST",
+	// 			url: "http://"+server+"/disnakerserver/cekupdate.php?versi=?",
+	// 			data: dataString,
+	// 			crossDomain: true,
+	// 			cache: false,
+	// 			success: function(hasil){
+	// 				if(versi != hasil)
+	// 				{
+  //           swal({
+	// 						title: "Update Available",
+	// 						type: "error",
+	// 						text: "Silahkan Update Aplikasi untuk melanjutkan",
+	// 						html: true
+	// 					});
+	//
+	// 				}
+	// 				else
+	// 				{
+  //           '<a href=""http://"+server+"/disnakerserver/aplikasi/disnakerapp.apk">Download!</a>'
+	// 				}
+	// 			}
+	// 		});
 //---------------------------------------------------
         var url = window.location.pathname;
         var filename = url.substring(url.lastIndexOf('/') + 1);

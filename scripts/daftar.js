@@ -6,13 +6,14 @@ $(document).ready(function(){
 	var jam  = dates.getHours();
 	var tanggal  = dates.getDate();
 	var bulan  = dates.getMonth();
-	var waktu_input  = new Date();
-  var username       = Math.floor(Math.random()* jam * detik * tanggal * bulan);
+
+  var username       = $("#email").val();
   var nick_name      = $("#nick_name").val();
   var email       	 = $("#email").val();
   var password       = $("#password").val();
 	var password2       = $("#password2").val();
   var nomor_telp     = $("#nomor_telp").val();
+  var perusahaan    = $("#email").val();
 	if (nick_name == 0 || nick_name.length < 5) {
 		swal({
 				title: "Nama Error",
@@ -49,7 +50,7 @@ $(document).ready(function(){
 				html: true
 			});
 	}else {
-		var dataString = "nick_name="+nick_name+"&email="+email+"&password="+password+"&nomor_telp="+nomor_telp+"&username="+username;
+		var dataString = "nick_name="+nick_name+"&email="+email+"&password="+password+"&nomor_telp="+nomor_telp+"&username="+username+"&perusahaan="+perusahaan;
 		var url = 'http://'+server+'/disnakerserver/daftar.php?callback='
 		$.ajax({
 			type: "POST",
@@ -76,16 +77,16 @@ $(document).ready(function(){
 						 text: 'Berhasil Mendaftarkan Akun. Mohon Tunggu Sampai Akun di Aktivasi Oleh Admin.',
 						 html: true
 								 });
-						//  setTimeout(function() {
-						// 	 window.location.href = "index.html"; //Halaman Regidrek
-						//  }, 4000)
+						 setTimeout(function() {
+							 window.location.href = "index.html"; //Halaman Regidrek
+						 }, 4000)
 				}
 				else
 				{
 					swal({
 						 title: "Error",
 						 type: "error",
-						 text: 'Data Anda Salah, Silahkan Logout lalu Login Kembali.',
+						 text: 'Email Sudah Pernah Terdaftar. Mohon Daftarkan Akun Anda dengan Email Lain',
 						 html: true
 								 });
 							 }

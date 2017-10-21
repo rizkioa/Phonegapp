@@ -94,51 +94,51 @@ $(document).ready(function(){
 				 return false;
 				 });
 
-				 $("#btn_simpan_data").click(function(){
-					 var url="http://"+server+"/disnakerserver/ganti_password.php?callback=?";
-				   var username = localStorage.username;
-				   var namaLengkap = $("#namaLengkap").val();
-				   var email = $("#NomorTelepon").val();
-					 var nomorTelp = $("#Email").val();
-				   var dataString="nick_name="+namaLengkap+"&nomor_telepon="+nomorTelp+"&email="+email;
-				   if($.trim(namaLengkap) != 0 || $.trim(email)!= 0 || $.trim(nomorTelp)!= 0 ){
-				   $.ajax({
-				     type: "POST",
-				     url: url,
-				     data: dataString,
-				     crossDomain: true,
-				     cache: false,
-				     success: function(data){
-				       if(data=="data salah")
-				       {
-								 swal({
-			 							title: "Error",
-			 							type: "error",
-			 							text: 'Password lama Salah.',
-			 							html: true
-			 									});
-				       }
-				       else if(data == "sukses")
-				       {
-
-								 swal({
-			 							title: "Berhasil",
-			 							type: "success",
-			 							text: 'Berhasil Mengganti Password',
-			 							html: true
-			 									});
-
-
-				       }
-				       else
-				       {
-				         alert("Terdapat Kesalahan. Segera Hubungi Admin.");
-				       }
-				     }
-				   });
-				 } else if($.trim(old_password) == 0 || $.trim(new_password) == 0) {
-				 	alert('username dan Password Masih Kosong')
-				 }
-				 return false;
-				 });
+				//  $("#btn_simpan_data").click(function(){
+				// 	 var url="http://"+server+"/disnakerserver/ganti_password.php?callback=?";
+				//    var username = localStorage.username;
+				//    var namaLengkap = $("#namaLengkap").val();
+				//    var email = $("#NomorTelepon").val();
+				// 	 var nomorTelp = $("#Email").val();
+				//    var dataString="nick_name="+namaLengkap+"&nomor_telepon="+nomorTelp+"&email="+email;
+				//    if($.trim(namaLengkap) != 0 || $.trim(email)!= 0 || $.trim(nomorTelp)!= 0 ){
+				//    $.ajax({
+				//      type: "POST",
+				//      url: url,
+				//      data: dataString,
+				//      crossDomain: true,
+				//      cache: false,
+				//      success: function(data){
+				//        if(data=="data salah")
+				//        {
+				// 				 swal({
+			 // 							title: "Error",
+			 // 							type: "error",
+			 // 							text: 'Password lama Salah.',
+			 // 							html: true
+			 // 									});
+				//        }
+				//        else if(data == "sukses")
+				//        {
+				 //
+				// 				 swal({
+			 // 							title: "Berhasil",
+			 // 							type: "success",
+			 // 							text: 'Berhasil Mengganti Password',
+			 // 							html: true
+			 // 									});
+				 //
+				 //
+				//        }
+				//        else
+				//        {
+				//          alert("Terdapat Kesalahan. Segera Hubungi Admin.");
+				//        }
+				//      }
+				//    });
+				//  } else if($.trim(old_password) == 0 || $.trim(new_password) == 0) {
+				//  	alert('username dan Password Masih Kosong')
+				//  }
+				//  return false;
+				//  });
 				 });

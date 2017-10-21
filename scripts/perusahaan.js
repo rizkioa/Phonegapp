@@ -8,11 +8,11 @@ $(document).ready(function(){
 						'<tr>'+
 						'<td>'+isi.nama_perusahaan+'</td>'+
 						'<td>'+'<a class="modal-trigger btn red">'+isi.status_registrasi+'</a>'+'</td>'+
-						'<td>'+'<a class="modal-trigger btn" id="detail-'+isi.nama_perusahaan+'">Detail</a>'+'</td>'+
-						'<input id="form" name="form" value="detail-'+isi.nama_perusahaan+'"type="hidden">'+
+						'<td>'+'<a class="modal-trigger btn" id="detail-'+isi.id_perusahaan+'">Detail</a>'+'</td>'+
+						'<input id="form" name="form" value="detail-'+isi.id_perusahaan+'"type="hidden">'+
 						'</tr>'
 			 			);
-						$('#detail-'+isi.nama_perusahaan).click(function(){
+						$('#detail-'+isi.id_perusahaan).click(function(){
 							swal({
 										  title: 'Detail Data',
 										  type: false,
