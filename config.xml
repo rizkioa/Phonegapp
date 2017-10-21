@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.disnaker.lampung" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Disnakertran Prov. Lampung APP</name>
+    <name>Wajib Lapor Disnakertrans Prov. Lampung APP</name>
     <description>
         Aplikasi Resmi Input Data Perusahaan Milik Disnakertrans Provinsi Lampung
     </description>
-    <author email="admin@laksana.org" href="http://laksana.org">
+    <author email="admin@laksana.org" href="http://phonegap.com">
         laksana Group
     </author>
     <content src="index.html" />
